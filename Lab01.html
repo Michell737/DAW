@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LAB01 - Michell Tena Ortega</title>
+    </head>
+    <body>
+        <header>
+            <div class="info_personal">
+                <p><strong> Michell Tena Ortega</strong></p>
+                <p><strong>A01700396</strong></p>
+            </div>
+            <hr>
+            <h1>Laboratorio 1: Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
+        </header>
+        
+                    <h2>¿Cuál es la diferencia entre Internet y la World Wide Web?</h2>
+                    <p>
+                        Todo lo que conforma la Web funciona a través de Internet, pero en Internet hay mucho más que en la Web, como por ejemplo: Cada vez que usted realiza una videollamada a través de Skype, Facetime, Zoom, WhatsApp, está utilizando Internet, pero NO la Web.
+                    </p>
+                    <h2>¿Cuáles son las partes de un URL?</h2>
+                    <ul>
+                        <li> Protocolo HTTPS </li>
+                        <li> Subdominio </li>
+                        <li> Dominio </li>
+                        <li> TLD </li>
+                        <li> Ruta </li>
+                        <li> Parámetro o Query String </li>
+                        <li> Etiqueta </li>
+                    </ul>
+                        <img src="https://partesde.info/wp-content/uploads/2018/07/partes-url.jpg" alt="estructura url"
+                        width="600" height="280">
+                    
+                    <h2>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</h2>
+                    <p>
+                        <span class="concepto">GET: </span>
+                        Solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos. (Pedimos algo al servidor)
+                        <br>
+                        <span class="concepto">HEAD:</span>
+                        Pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta. (Cuando solo queremos la información del header de la petición)
+                        <br>
+                        <span class="concepto">POST:</span>
+                        Se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio en el estado o efectos secundarios en el servidor. (Mandarle algo al servidor)
+                        <br>
+                        <span class="concepto">PUT:</span>
+                        Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición. (Actualizar los datos al servidor)
+                        <br>
+                        <span class="concepto">PATCH:</span>
+                        Es utilizado para aplicar modificaciones parciales a un recurso. (Actualizar los datos al servidor)
+                        <br>
+                        <span class="concepto">DELETE:</span>
+                        Borra un recurso en específico. (Borrar datos del servidor)
+                    </p>
+                    <h2>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en 
+                        algún sitio? ¿Por qué?
+                    </h2>
+                    <p>
+                        Por método POST porque la información no viaja por toda la ruta todos los datos sensibles y eso lo hace más seguro.
+                    </p>
+                    <h2>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</h2>
+                    <p>
+                        El método GET porque le pedimos al servidor acceder a un sitio por URL o se hace clic en un vínculo.
+                    </p>
+                    <h2>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</h2>
+                    <p>
+                        No ocurrió un error, todo lo que está en el rango de los 200, significa que la petición fue entendida, aceptada y procesada correctamente.                        
+                    <br>
+                    <em>200 OK → El request es correcto. Esta es la respuesta estándar para respuestas correctas.</em>
+                    </p>
+                    <h2>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio 
+                        y se encontró con un error 404? ¿Por qué?
+                    </h2>
+                    <p>
+                        No es responsabilidad del desarrollador, porque el usuario es el que pudo haber escrito mal la URL. 
+                        Aunque algunas veces puede ser porque el desarrollador no quiere que una persona externa acceda.
+                        ó que el desarrollador haya cometido un error en el enlace y en este caso, el desarrollador si debe verificarlo y/o corregirlo. 
+                        <br>
+                        <em>404 Not Found → El recurso del request no se ha podido encontrar pero podría estar disponible en el futuro. Se permiten requests subsecuentes por parte del cliente.</em>
+                    </p>
+                    <h2>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se 
+                        encontró con un error 500? 
+                        ¿Por qué?
+                    </h2>
+                    <p>
+                        Sí es responsabilidad del desarrollador porque significa que uno de sus scripts crasheó. 
+                        <br>
+                        <em>500 Internal Server Error → Error genérico, cuando se ha dado una condición no esperada y no se puede concretar el mensaje.</em>
+                    </p>
+                    <h2>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? 
+                        Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.
+                    </h2>
+                    <p>
+                        Los tags y atributos desaprobados son partes del estándar HTML cuyo uso ya no es recomendado. 
+                        Esto sucede dado que el estándar es actualizado de vez en cuando (por ejemplo, de la versión 3.0 a la 4.0) y alguno tags o 
+                        características del lenguaje son agregadas, removidas o desaprobadas. 
+                        Algunas formas sintácticas o expresiones HTML que se consideraban válidas hace unos años han pasado a considerarse no recomendados 
+                        para los desarrollos web actuales. Sin embargo, dado la gran cantidad de páginas web que se construyeron usando estas formas del 
+                        lenguaje anticuadas y a que los programadores no podían adaptarse de un día para otro a los cambios en los lenguajes, en lugar de
+                         no permitir estas expresiones, las nuevas versiones de los lenguajes las clasifican como deprecated o no recomendadas.
+                        <br>
+                        Ejemplos de elementos desaprobados en HTML5:
+                    </p>
+                    <ul>
+                        <li>En HTML 5 se ha eliminado el atributo name de la etiqueta <a> y sólo se puede utilizar el atributo id para identificar los destinos.</li>
+                        <li> applet </li>
+                        <li> basefont </li>
+                        <li> big </li>
+                        <li> center </li>
+                        <li> dir </li>
+                        <li> font </li>
+                    </ul>
+               
+                    <h2>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</h2>
+                    <p>
+                        Las principales diferencias entre HTML4 y HTML5 es que la última versión de HTML (HTML5) es mucho más dinámica y permite 
+                        incluir elementos multimedia. Asimismo, ofrece mayor seguridad en el sitio y está menos disponible a exploits debido a que 
+                        HTML5 es totalmente capaz de realizar cosas sin la necesidad de Javascript o similares. También esta última actualización 
+                        tiene mejor rendimiento y soporte móvil. Por último, una diferencia importante es que HTML5 se actualiza como un estándar 
+                        y va cubriendo las necesidades de la web.
+                        <br>
+                        <li>Se introducen nuevos elementos, como: section, article, aside, header, footer, etc.</li>  
+                        <li>Se introducen nuevos atributos, como: media, charset, autofocus, placeholder, etc.</li> 
+                        <li>Algunos elementos cambian, como: a, b, i, menu, etc.</li> 
+                        <li>Algunos atributos cambian, como: type, name, summary, etc.</li> 
+                        <li>Algunos elementos desaparecen, como: basefont, big, center, etc.</li> 
+                        <li>Algunos atributos desaparecen, como: align, background, bgcolor, etc.</li> 
+                        <li>Mejora de las API, como: getElementsByClassName() y innerHTML.</li> 
+                    </p>
+               
+                    <h2>¿Qué componentes de estructura y estilo tiene una tabla?</h2>
+                    <p>
+                        Una tabla HTML (table) es un conjunto de celdas (td o th) organizadas en filas (tr) que a su vez se organizan en grupos de filas (thead, tbody o tfoot). Además, la tabla puede tener una leyenda (caption) y hacer referencia a las columnas (col y colspan). 
+                        <br>
+                        El estilo de la tabla sirve para cambiar el aspecto de la tabla, como son los bordes (border), tamaño de celdas (height y width), alineación, separación entre celdas y color de fondo y bordes.
+                        <br>
+                        A continuación se muestra un ejemplo de una tabla en html:
+                    </p>
+                    
+                        <img src="https://francescricart.com/wp-content/uploads/2018/02/thead-tbody-tfoot-caption.jpg" alt="Ejemplo tabla html"
+                        width="500" height="300">
+
+                    <h2>¿Cuáles son los principales controles de una forma HTML5?</h2>
+                    <p>
+                        Los principales controles de un formulario de HTML5 son: Texto (text, password, email, textarea), verificación (checkbox), 
+                        opciones (radio), fecha (date), archivos (file) y botones (submit, reset y button) 
+                    </p>
+                    <h2>¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo:</h2>
+                        <a href="http://html5test.com/">http://html5test.com/</a>
+                  
+                    <p>
+                        Utilizo Opera 78  y este soporta 474 elementos de HTML5. 
+                    </p>
+                    <h2>Sobre el ciclo de vida y desarrollo de los sistemas de información:</h2>
+                    <article>
+                        <h3>¿Cuál es el ciclo de vida de los sistemas de información?</h3>
+                        <p>Pueden distinguirse siete fases. Se trata de las siguientes: </p>
+                        <ul>
+                            <li>Fase de planificación: En esta fase se prepara el diseño y posterior implementación del sistema. Es necesario definir el alcance del proyecto, justificarlo y escoger una metodología para su desarrollo. También es preciso asociar las diferentes actividades a plazos de tiempo y designar roles y responsabilidades.</li>
+                            <li>Fase de análisis: Una vez que el equipo de proyecto se decide por una metodología de desarrollo determinada, da comienzo la segunda etapa en el ciclo de vida de un sistema de información. Es la que tiene que ver con el análisis y donde se busca concretar una serie de requisitos, que son los que regirán el nuevo sistema o los cambios a introducir en el antiguo, si con el proyecto se busca su actualización.</li>
+                            <li>Fase de diseño: En este estadio el equipo de proyecto tendrá que determinar cómo el nuevo sistema de información cumplirá con los requisitos aplicables. Es por ello que, a estas alturas del ciclo de vida de un sistema de información conviene identificar soluciones potenciales, evaluarlas y elegir la más conveniente. Ésta será o la más efectiva, o la más eficiente en costes o la menos compleja. Una vez completadas esas tareas, habrá que continuar haciendo la selección tecnológica de software y hardware, desarrollando las especificaciones para las distintas aplicaciones y obteniendo aprobación de la gerencia para poder proceder a la implementación del nuevo sistema.</li>
+                            <li>Fase de desarrollo: El desarrollo software marca un antes y un después en la vida del sistema y significa, además, el inicio de la producción. El cambio es una constante durante esta etapa, en la que suele ser recomendable poner el foco en la formación y capacitación de los usuarios y el equipo técnico</li>
+                            <li>Fase de integración y periodo de pruebas: El objetivo de esta etapa es corroborar que el diseño propuesto cumple con los requisitos de negocio establecidos. Puede ser necesario repetir las pruebas tantas veces como haga falta para evitar errores y, de hecho, conviene que el usuario final dé su conformidad con el resultado. Por último, este estadio concluye con la verificación y validación, que ayudan a asegurar la compleción del programa con éxito.</li>
+                            <li>Fase de implementación: En esta etapa del ciclo de vida de un sistema de información hay que proceder a la instalación del hardware y software elegidos, crear las aplicaciones correspondientes, someterlas a pruebas, crear la documentación pertinente y capacitar a los usuarios. La conversión de datos es importante en este estadio, en el que ya se empieza a trabajar en el nuevo sistema.</li>
+                            <li>Fase de mantenimiento: Esta etapa del ciclo de vida de un sistema de información está relacionada con las operaciones del día a día. Por lo general, consiste en introducir los ajustes necesarios para mejorar el rendimiento y corregir los problemas que puedan surgir. Una vez concluye la etapa de implementación se suele abrir un periodo de operación supervisada, durante el que las actividades de mantenimiento cobran una especial importancia, al orientarse a hacer backups, dar soporte a los usuarios, resolver fallos, optimizar el sistema para cuestiones relacionadas con la seguridad o la velocidad y revisar el software para garantizar la alineación con las metas del negocio.</li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>¿Cuál es el ciclo de desarrollo de sistemas de información?</h3>
+                        <p>El ciclo de desarrollo de un Sistema de información consiste en las siguientes fases:</p>
+                        <ul>
+                            <li>Planificación</li>
+                            <li>Definición de requisitos</li>
+                            <li>Diseño</li>
+                            <li>Desarrollo y pruebas</li>
+                            <li>Puesta en marcha</li>
+                            <li>Mantenimiento</li>
+                            <li>Dispocisión</li>
+                        </ul>
+                    </article>
+                <footer>
+                    <a href="https://code.visualstudio.com/"><h2>Visual Studio Code</h2></a>
+                    <p>Este HTML fue elaborado en Visual Studio Code</p>
+                </footer>
+    </body>
+</html>
