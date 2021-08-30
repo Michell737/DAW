@@ -77,5 +77,11 @@ header h1 {
     color: white;
   }
 
+  .git{
+    font-family: 'Times New Roman', Times, serif;
+  }
 
 
+#titulo{
+    color:cadetblue;
+}
