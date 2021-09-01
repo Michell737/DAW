@@ -74,5 +74,4 @@ const menu = [];
 menu.push({platillo: "Carne asada", precio: 30.00});
 menu.push({platillo: "Frijoles charros", precio: 15.00});
 
-
 console.log(menu);
