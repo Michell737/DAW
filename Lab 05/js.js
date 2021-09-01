@@ -55,7 +55,24 @@ const calcular_precio_flecha = (numero_tacos) => numero_tacos * precio;
 console.log("Tu total es de $" + calcular_precio_flecha(7));
 
 //Arreglos
+const platillos = [];
+platillos.push("Tinga");
+platillos.push("Spaguetti");
+platillos.push("Carne asada");
 
 //Recorrido de arreglos
+for(let platillo of platillos){
+    console.log(platillo);
+}
+
+platillos.pop();    //Eliminó la carne asada
+
+console.log(platillos);
 
 //Objetos
+const menu = [];
+menu.push({platillo: "Carne asada", precio: 30.00});
+menu.push({platillo: "Frijoles charros", precio: 15.00});
+
+
+console.log(menu);
