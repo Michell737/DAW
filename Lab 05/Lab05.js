@@ -8,9 +8,6 @@ function Cuadrados_Cubos() {
         document.write("<td>" + i + "</td>");
         document.write("<td>" + Math.pow(i, 2) + "</td>");
         document.write("<td>" + Math.pow(i, 3) + "</td> </tr>");
-
-
-
     }
 
 }
@@ -21,7 +18,6 @@ function Suma_Aleatoria() {
     let num1 = parseInt(Math.random() * 10);
     let num2 = parseInt(Math.random() * 10);
     let res = num1 + num2;
-
 
     let resUsuario = prompt("Da el resultado de la suma de " + num1 + " y " + num2);
 
@@ -112,14 +108,12 @@ function Inverso() {
 
 function Interes_compuesto() {
 
-    var precioFinal;
     let credito = prompt("Ingresa la cantidad de crédito solicitado: ");
     let años = prompt("Cantidad de años a los que se solicitó el crédito: ");
     let interes_porc = prompt("Ingrese el porcentaje de interés compuesto anual: ");
-    //Obtener interes compuesto anual
-
-    interes = (interes_porc/100);
     
+    //Obtener interes compuesto anual
+    interes = (interes_porc/100);
     Deuda_final = credito*Math.pow((1+interes),años);
 
     document.getElementById("interes_compuesto").innerHTML = "Si se solicita un crédito de " + credito + " pesos durante " + años + " años a un interés compuesto del " + interes_porc + " % anual . . . "+ "<br>El dinero que se pagará al final de los "+ años + " años, será de: <br> $" + Deuda_final;
