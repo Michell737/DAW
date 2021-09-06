@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 5: Fundamentos de JavaScript </title>
+</head>
+<body>
+    <header>
+        <center>
+            <h1>Michell Tena Ortega <br> Matrícula: A01700396 <br></h1>
+            <nav>
+                <a href=" https://cutt.ly/Kf7gwaz" target="_blank">Contacto LinkedIn</a>
+            </nav>
+        </center>
+
+        <link rel="stylesheet" href="style.css.min">
+
+        <div class="Preguntas">
+            <br>
+            <button id="Cuadrados_Cubos" onclick="Cuadrados_Cubos()">Cuadrados_Cubos</button>
+            <button id="Suma_Aleatoria" onclick="Suma_Aleatoria()">Suma_Aleatoria</button>
+            <button id="Contador" onclick="Contador()">Contador</button>
+            <button id="Promedios" onclick="Promedios()">Promedios</button>
+            <button id="Inverso" onclick="Inverso()">Inverso</button>
+            <button id="Interes_compuesto" onclick="Interes_compuesto()">Interes_compuesto</button>
+        </div>
+
+        <div id="interes_compuesto"></div>
+    </header>
+
+
+    <main>
+        <section>
+            <article>
+                <h2>Preguntas</h2>
+                    <h3>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</h3>
+                    <p>
+                        Semejanzas: el nombre.
+                        <br>
+                        Diferencias: todo lo demás, es decir:
+                        <br>
+                        <li>Java crea aplicaciones que tras ser compiladas (traducidas a código ejecutable) se pueden ejecutar en navegadores a través de una máquina virtual, mientras que Javascript se ejecuta nativamente en los navegadores sin necesidad de ninguna máquina virtual.</li>
+                        <li>Java es un lenguaje fuertemente tipado y Javascript es débilmente tipado. Esto significa que las variables en Java tienen un determinado tipo y no pueden modificarse, por el contrario, en Javascript una misma variable puede variar el tipo de su contenido en ejecución.</li>
+                        <li>Java es un lenguaje de programación orientado a objetos puramente, y Javascript es un lenguaje basado en prototipos. A través de estos prototipos, se puede emular la programación orientada a objetos.</li>
+                        <li>Java un lenguaje más pesado y robusto, mientras que Javascript presenta mayor versatilidad y flexibilidad.</li>
+                        <li>Java es un lenguaje mayormente de servidor que permite ejecutar código en un navegador a través de máquinas virtuales. Javascript  nos sirve para crear código sólo de cliente, sólo de servidor, o de cliente y servidor pudiendo abarcar con un único lenguaje lo que se llama el Full Stack Development.</li>
+                    </p>
+                <h3>¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)</h3>
+                    <p>
+                        <li>apply</li>  
+                        <li>arguments</li>
+                        <li>bind</li>
+                        <li>call</li>
+                        <li>caller</li>
+                    </p>
+                <h3>¿Qué métodos tienen los arreglos? (Menciona al menos 5*)</h3>
+                    <p>
+                        <li>constructor</li>  
+                        <li>from</li>
+                        <li>hasOwnProperty</li>
+                        <li>isArray</li>
+                        <li>isPrototypeOf</li>
+                    </p>
+                <h3>¿Cómo se declara una variable con alcance local dentro de una función?</h3>
+                    <p>
+                        Con <strong>let</strong> declaramos variables que viven dentro del ámbito en el que se declara, es decir entre las llaves {}    
+                        <br>
+                        Con <strong>var</strong> Se tiene un alcance en toda la función donde fue declarada.
+                    </p>
+                <h3>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</h3>
+                    <p>
+                        <li><strong>No localidad:</strong> El código fuente es más fácil de entender cuando el alcance de sus elementos individuales es limitado. Las variables globales pueden ser leídas o modificadas por cualquier parte del programa, por lo que es difícil recordar o razonar sobre cada posible uso.</li>
+                        <li><strong>Ningún control de acceso o comprobación de restricciones: </strong> Una variable global puede ser obtenida o establecida por cualquier parte del programa y cualquier regla con respecto a su uso puede romperse o olvidarse fácilmente. (En otras palabras, los accesores get / set son generalmente preferibles sobre el acceso directo a datos, y esto es aún más importante para los datos globales.) Por extensión, la falta de control de acceso dificulta enormemente el logro de seguridad en situaciones en las que se desee ejecutar código no confiable (Como trabajar con complementos de terceros).</li>
+                        <li><strong>Acoplamiento implícito:</strong> Un programa con muchas variables globales a menudo tiene acoplamientos estrechos entre algunas de esas variables, y acoplamientos entre variables y funciones. La agrupación de elementos acoplados en unidades cohesivas generalmente conduce a mejores programas.</li>
+                        <li><strong>Problemas de concurrencia:</strong> Si las variables globales pueden ser accedidas por múltiples hilos de ejecución, la sincronización es necesaria (y demasiado a menudo se descuida). Al vincular dinámicamente los módulos con las globales, el sistema compuesto podría no ser seguro para los hilos incluso si los dos módulos independientes probados en docenas de contextos diferentes fueran seguros.</li>
+                        <li><strong>Contaminación del espacio de nombres:</strong> Los nombres globales están disponibles en todas partes. Usted puede, sin saberlo, terminar usando un global cuando usted piensa que está usando un local (por falta de ortografía u olvidarse de declarar el local) o viceversa. Además, si alguna vez tienes que vincular módulos que tienen los mismos nombres de variables globales, si tienes suerte, obtendrás errores de enlace. Si no tienes suerte, el enlazador tratará simplemente todos los usos del mismo nombre que el mismo objeto.</li>
+                        <li><strong>Problemas de asignación de memoria:</strong> Algunos entornos tienen esquemas de asignación de memoria que hacen difícil la asignación de globales. Esto es especialmente cierto en lenguajes donde los "constructores" tienen efectos secundarios distintos de la asignación (porque, en ese caso, se pueden expresar situaciones inseguras en las que dos globales dependen mutuamente). Además, al vincular dinámicamente módulos, puede no estar claro si diferentes bibliotecas tienen sus propias instancias de globales o si los globales se comparten.</li>
+                        <li><strong>Pruebas y Confinamiento: </strong> La fuente que utiliza globales es algo más difícil de probar porque no se puede establecer fácilmente un ambiente "limpio" entre las ejecuciones. De manera más general, la fuente que utiliza servicios globales de cualquier tipo (por ejemplo, lectura y escritura de archivos o bases de datos) que no se proporcionan explícitamente a esa fuente es difícil de probar por la misma razón. Para sistemas de comunicación, la capacidad de probar invariantes del sistema puede requerir que se ejecute más de una "copia" de un sistema simultáneamente, lo cual se ve enormemente obstaculizado por el uso de servicios compartidos -incluida la memoria global- que no se proporcionan para compartir como parte de la prueba.</li>
+                    </p>
+
+            </article>
+
+        </section>
+
+
+    </main>
+
+    <aside>
+        <center>ITESM Querétaro 2021</center>
+    </aside>
+
+    <footer>
+        <center>Editor usado:<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></center>
+    </footer>
+    <script src="Lab05.js"></script>
+</body>
+</html>
