@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            let peliculas =[]
+        $(document).ready(function(){
+        $("#getQuote").click(function(){
+            $.get("https://goquotes-api.herokuapp.com/api/v1/random?count=1", function(data, status){
+               // var data = $.parseJSON(data);
+               console.log(data)
+                $("#quote").text(data.quotes[0].text)
+                $("#author").text(data.quotes[0].author)
+
+            });
+        });
+        $("#registrarP").click(function(){
+            peliculas.push($("#pelicula").val())
+            $("#lista").append("<li>"+$("#pelicula").val()+"</li>")
+            $("#pelicula").val("")
+        })
+        $("#registrar").click(function(){
+            $.ajax({
+            url: "https://reqres.in/api/users",
+            type: "POST",
+            data: {
+                name: $("#nombre").val(),
+                movies: peliculas
+            },
+            success: function(response){
+                peliculas = []
+                $("#lista").empty();
+                $("#resultado").text("Se ha creado el perfil de la persona:" + response.name +"con el id " + response.id+
+                " con las siguientes peliculas:"+response["movies[]"].join(',')
+                )
+                console.log(response);
+            }
+         });
+        });
+        
+                
+
+        });
+        </script>
+    </head>
+    <body>        
+        <h1 id="quote"></h1>
+        <p id="author"></p>
+        <button id="getQuote">Frase random</button><br>
+        <p>Persona</p><br>
+        <input id="nombre">
+        <p>pelicula a agregar</p><br>
+        <input id="pelicula"><br>
+        <ul id="lista">
+
+        </ul>
+        <br>
+        <button id="registrarP">Registrar Película</button>
+        <button id="registrar">Registrar</button>
+        <p id="resultado"></p>
+    </body>    
+</html>
